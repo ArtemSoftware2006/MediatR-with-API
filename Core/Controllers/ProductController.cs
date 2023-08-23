@@ -12,7 +12,7 @@ namespace Core.Controllers
     {
         private readonly IMediator _mediator;
         private readonly IMapper _mapper;
-        ProductController(IMapper mapper, IMediator mediator)
+        public ProductController(IMapper mapper, IMediator mediator)
         {
             _mapper = mapper;
             _mediator = mediator;
