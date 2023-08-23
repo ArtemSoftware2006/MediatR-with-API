@@ -2,7 +2,7 @@ using MediatR;
 
 namespace Core.Domain
 {
-    public class ProductListQueryHandler : IRequestHandler<ProductListQuery, List<ProductDTO>>
+    public class ProductListQueryHandler : IRequestHandler<ProductListQuery, ProductListVM>
     {
         private readonly Store _store;
         public ProductListQueryHandler(Store store)
@@ -10,7 +10,7 @@ namespace Core.Domain
             _store = store;
         }
 
-        public Task<List<ProductDTO>> Handle(ProductListQuery request, CancellationToken cancellationToken)
+        public Task<ProductListVM> Handle(ProductListQuery request, CancellationToken cancellationToken)
         {
             throw new NotImplementedException();
         }
